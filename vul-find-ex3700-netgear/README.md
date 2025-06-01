@@ -15,7 +15,7 @@ A stack-based buffer overflow vulnerability exists in the function sub_41619C at
 
 ## 2. Vulnerability  Analysis
 - The vulnerability is triggered during the parsing of a user's GET request when the request header contains `GET /mtd`.
-![2](./assets/2.png)
+![second](./assets/2.png)
 - Since the program uses memset(&v22[6], 0, 94);, the maximum size of the v22 buffer is effectively limited to 100 bytes. Therefore, if the data following the GET request exceeds this limit, a stack-based buffer overflow can occur.
 
 
